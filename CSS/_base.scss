@@ -1,0 +1,65 @@
+$main-font: 'Roboto', sans-serif;
+$primary-color: #ffa45b;
+$secondary-color: #ffe1bd;
+$tertiary-color: #ffebd2;
+$font-color: #000000;
+$menu-overlay-color:rgba(255, 164, 91, 0.95);
+
+@mixin flex($direction) {
+  display: flex;
+  flex-direction: $direction;
+}
+
+@mixin transitionEase {
+  transition: all .75s ease;
+}
+
+@mixin fontSet($weight: 400) {
+  font-family: $main-font;
+  font-weight: $weight;
+}
+
+@mixin sectionTitle {
+  letter-spacing: 5px;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+// animation
+  @keyframes typing {
+    from {
+      width: 0;
+    }
+  }
+
+  @keyframes blink {
+    50% {
+      border-color: transparent
+    }
+  }
+
+//responsive supprt
+@mixin media-md {
+  @media screen and (min-width: 480px) and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin media-lg {
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin media-xl {
+  @media screen and (min-width: 1024px) and (max-width: 1280px) {
+    @content;
+  }
+}
