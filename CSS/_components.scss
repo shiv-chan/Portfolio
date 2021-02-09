@@ -191,8 +191,8 @@ hr {
 }
 
 #modal {
-  position: fixed;
-  top: 0;
+  position: absolute;
+  top: 5rem;
   left: 10%;
   margin: 1rem auto;
   width: 80%;
@@ -204,7 +204,7 @@ hr {
   transform: scale(0);
   @include transitionEase;
 
-  .showModal {
+  &.showModal {
     transform: scale(1);
   }
 

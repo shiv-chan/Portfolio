@@ -82,6 +82,7 @@ body {
 
 #skills {
   @include defaultPadding(580px);
+  position: relative;
   background-color: $tertiary-color;
 
   h2 {
