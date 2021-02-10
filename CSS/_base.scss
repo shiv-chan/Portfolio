@@ -2,6 +2,7 @@ $main-font: 'Roboto', sans-serif;
 $primary-color: #ffa45b;
 $secondary-color: #ffe1bd;
 $tertiary-color: #ffebd2;
+$warning-color: rgb(255, 0, 0);
 $font-color: #000000;
 $menu-overlay-color:rgba(255, 164, 91, 0.95);
 
@@ -29,6 +30,10 @@ $menu-overlay-color:rgba(255, 164, 91, 0.95);
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+.showError {
+  visibility: visible !important;
 }
 
 

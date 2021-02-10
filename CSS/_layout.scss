@@ -105,16 +105,11 @@ body {
   .worksList {
     @include flex(column);
     align-items: center;
-    // display: grid;
-    // grid-template-columns: repeat(1, 1fr);
-    // grid-template-rows: auto;
-    // gap: 1.5rem;
-    // margin: 1.5rem auto;
   }
 }
 
 #contact {
-  @include defaultPadding(480px);
+  @include defaultPadding(540px);
   background-color: $tertiary-color;
 
   h1:nth-of-type(2) {
@@ -131,22 +126,35 @@ body {
   }
 
   form {
-    margin: 2rem auto;
+    position: relative;
+    margin: 1rem auto;
     width: 90%;
     @include flex(column);
 
+    label {
+      position: relative;
+      top: 0;
+      left: 0.5rem;
+      color: darken($primary-color, 20%);
+      visibility: hidden;
+    }
+
     input, textarea {
       display: inline-block;
-      height: 30px;
+      height: 40px;
       border: none;
       border-radius: 5px;
       background-color: #FFC784;
-      margin-bottom: 1rem;
-      padding: 0.8rem;
+      outline: none;
+      margin-bottom: 0.8rem;
+      padding: 1rem;
+      font-size: 18px;
+      @include fontSet;
 
       &::placeholder {
         @include fontSet;
-        color: $font-color;
+        color: darken($primary-color, 20%);
+        font-size: 18px;
       }
     }
 
@@ -158,9 +166,16 @@ body {
       border: none;
       background-color: $primary-color;
       padding: 5px;
-      width: 40%;
+      width: 120px;
       border-radius: 15px;
       margin-left: auto;
+      margin-top: 1rem;
+      font-size: 18px;
+      cursor: pointer;
+
+      &:active {
+        transform: scale(0.9);
+      }
     }
   }
 }

@@ -52,16 +52,32 @@
 		</section>
 		<section id="skills">
 			<h1>SKILLS</h1>
-			<a href="#skills" id="starDiscription">What level of fluency do the stars discribe?</a>
+			<a href="#skills" id="starDiscription"
+				>What level of fluency do the stars discribe?</a
+			>
 			<!-- Modal -->
 			<div id="modal">
 				<span class="close">&times;</span>
 				<h2><i class="fas fa-star"></i>Familiar</h2>
-				<p>Can make things work by collaging code snippets together from external referrences.</p>
-				<h2><i class="fas fa-star"></i><i class="fas fa-star"></i>Proficient</h2>
-				<p>Occassional reference to Stack external referrences, but have good understanding of what the code is doing.</p>
-				<h2><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>Excellent</h2> 
-				<p>Can code without external referrences or with minimal referrence to documentations.</p>
+				<p>
+					Can make things work by collaging code snippets together from external
+					referrences.
+				</p>
+				<h2>
+					<i class="fas fa-star"></i><i class="fas fa-star"></i>Proficient
+				</h2>
+				<p>
+					Occassional reference to Stack external referrences, but have good
+					understanding of what the code is doing.
+				</p>
+				<h2>
+					<i class="fas fa-star"></i><i class="fas fa-star"></i
+					><i class="fas fa-star"></i>Excellent
+				</h2>
+				<p>
+					Can code without external referrences or with minimal referrence to
+					documentations.
+				</p>
 			</div>
 			<!-- Modal end -->
 			<div class="langList">
@@ -168,7 +184,7 @@
 								<i class="fas fa-eye"></i> Preview
 							</a>
 							<a href="#!" class="projectsBtn">
-								<i class="fab fa-github"></i> Git Hub
+								<i class="fab fa-github"></i> GitHub
 							</a>
 						</div>
 					</div>
@@ -196,7 +212,7 @@
 								<i class="fas fa-eye"></i> Preview
 							</a>
 							<a href="#!" class="projectsBtn">
-								<i class="fab fa-github"></i> Git Hub
+								<i class="fab fa-github"></i> GitHub
 							</a>
 						</div>
 					</div>
@@ -224,7 +240,7 @@
 								<i class="fas fa-eye"></i> Preview
 							</a>
 							<a href="#!" class="projectsBtn">
-								<i class="fab fa-github"></i> Git Hub
+								<i class="fab fa-github"></i> GitHub
 							</a>
 						</div>
 					</div>
@@ -252,7 +268,7 @@
 								<i class="fas fa-eye"></i> Preview
 							</a>
 							<a href="#!" class="projectsBtn">
-								<i class="fab fa-github"></i> Git Hub
+								<i class="fab fa-github"></i> GitHub
 							</a>
 						</div>
 					</div>
@@ -280,7 +296,7 @@
 								<i class="fas fa-eye"></i> Preview
 							</a>
 							<a href="#!" class="projectsBtn">
-								<i class="fab fa-github"></i> Git Hub
+								<i class="fab fa-github"></i> GitHub
 							</a>
 						</div>
 					</div>
@@ -308,7 +324,7 @@
 								<i class="fas fa-eye"></i> Preview
 							</a>
 							<a href="#!" class="projectsBtn">
-								<i class="fab fa-github"></i> Git Hub
+								<i class="fab fa-github"></i> GitHub
 							</a>
 						</div>
 					</div>
@@ -318,18 +334,28 @@
 		<section id="contact">
 			<h1>CONTACT</h1>
 			<h1>I'M OPEN TO WORK.</h1>
-			<p>Please drop me a line !<br>I’m happy to hear from you &#128521;</p>
+			<p>Please drop me a line !<br />I’m happy to hear from you &#128521;</p>
 			<form>
-				<input type="text" placeholder="Name" required/>
-				<input type="email" placeholder="Email" required />
+				<label for="name">Name</label>
+				<input type="text" placeholder="Name" id="name" class="formControl" required />
+				<i class="fas fa-exclamation-circle"></i>
+				<small>Error message</small>
+				<label for="email">Email</label>
+				<input type="email" placeholder="Email" id="email" class="formControl" required />
+				<i class="fas fa-exclamation-circle"></i>
+				<small>Error message</small>
+				<label for="message">Message</label>
 				<textarea
 					name="massage"
 					id="message"
 					cols="40"
 					rows="10"
 					placeholder="Message"
+					class="formControl"
 					required
 				></textarea>
+				<i class="fas fa-exclamation-circle"></i>
+				<small>Error message</small>
 				<button type="submit"><span>Submit</span></button>
 			</form>
 		</section>
