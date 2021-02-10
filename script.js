@@ -80,10 +80,10 @@ function removeFormStyle(index){
 //check inputs when submit button is clicked
 submitBtn.addEventListener('click', (e) => {
 	e.preventDefault();
-	checkInputsBtn();
+	checkInputs();
 });
 
-function checkInputsBtn() {
+function checkInputs() {
   const nameValue = name.value.trim();
   const emailValue = email.value.trim();
   const messageValue = message.value.trim();
@@ -132,6 +132,14 @@ function removeError(input){
   small.classList.remove('showError');
 }
 
+//check inputs when focusout
+for (let i = 0; i < formControl.length; i++) {
+  formControl[i].addEventListener('focusout', () => {
+    if(formControl[i].classList.contains('errorBorder')){
+	    checkInputs();
+    }
+  });
+}
 
 //check email with a regular expression
 function isEmail(email) {
