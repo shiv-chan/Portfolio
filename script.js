@@ -31,14 +31,39 @@ hamburger.addEventListener('click', () => {
 });
 
 //menu items clicked
-for (let menuItem of menuItems) {
-	menuItem.addEventListener('click', () => {
-		overlay.classList.remove('open');
-		overlay.classList.add('close');
-		hamburgerLine.classList.remove('open');
-		menuOpen = false;
-	});
+if(window.innerWidth < 768){
+  for (let menuItem of menuItems) {
+    menuItem.addEventListener('click', () => {
+      overlay.classList.remove('open');
+      overlay.classList.add('close');
+      hamburgerLine.classList.remove('open');
+      menuOpen = false;
+    });
+  }
 }
+
+window.addEventListener('resize', () => {
+  if(window.innerWidth < 768){
+    for (let menuItem of menuItems) {
+      menuItem.addEventListener('click', () => {
+        overlay.classList.remove('open');
+        overlay.classList.add('close');
+        hamburgerLine.classList.remove('open');
+        menuOpen = false;
+      });
+    }
+  }
+
+  if(window.innerWidth > 768 && overlay.classList.contains('close')){
+    overlay.classList.remove('close');
+    for (let menuItem of menuItems) {
+      menuItem.addEventListener('click', () => {
+        overlay.classList.remove('close');
+        menuOpen = false;
+      });
+    }
+  }
+});
 
 //modal control
 starDiscription.addEventListener('click', () => {

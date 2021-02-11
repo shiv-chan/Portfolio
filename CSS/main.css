@@ -89,13 +89,14 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  max-width: 1000px;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 1rem;
+  margin: 1rem auto;
 }
 
 #about .profile img {
@@ -115,17 +116,21 @@ body {
 
 #about .profile .profileSummary h2 {
   font-size: 16px;
+  min-width: 122px;
 }
 
 #about .profile .profileSummary p:nth-of-type(1) {
   font-size: 12px;
   margin-bottom: 1rem;
+  min-width: 122px;
 }
 
 #about .profile .profileSummary p:nth-of-type(2) {
   font-size: 12px;
   height: 70px;
   width: auto;
+  max-width: 460px;
+  min-width: 122px;
 }
 
 #skills {
@@ -212,12 +217,13 @@ body {
   visibility: hidden;
 }
 
-#contact form input, #contact form textarea {
+#contact form input,
+#contact form textarea {
   display: inline-block;
   height: 40px;
   border: none;
   border-radius: 5px;
-  background-color: #FFC784;
+  background-color: #ffc784;
   outline: none;
   margin-bottom: 0.8rem;
   padding: 1rem;
@@ -226,28 +232,32 @@ body {
   font-weight: 400;
 }
 
-#contact form input::-webkit-input-placeholder, #contact form textarea::-webkit-input-placeholder {
+#contact form input::-webkit-input-placeholder,
+#contact form textarea::-webkit-input-placeholder {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   color: #f46d00;
   font-size: 18px;
 }
 
-#contact form input:-ms-input-placeholder, #contact form textarea:-ms-input-placeholder {
+#contact form input:-ms-input-placeholder,
+#contact form textarea:-ms-input-placeholder {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   color: #f46d00;
   font-size: 18px;
 }
 
-#contact form input::-ms-input-placeholder, #contact form textarea::-ms-input-placeholder {
+#contact form input::-ms-input-placeholder,
+#contact form textarea::-ms-input-placeholder {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   color: #f46d00;
   font-size: 18px;
 }
 
-#contact form input::placeholder, #contact form textarea::placeholder {
+#contact form input::placeholder,
+#contact form textarea::placeholder {
   font-family: "Roboto", sans-serif;
   font-weight: 400;
   color: #f46d00;
@@ -266,8 +276,9 @@ body {
   border-radius: 15px;
   margin-left: auto;
   margin-top: 1rem;
-  font-size: 18px;
+  font-size: 16px;
   cursor: pointer;
+  outline: none;
 }
 
 #contact form button:active {
@@ -294,6 +305,226 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   font-size: 10px;
+}
+
+@media screen and (min-width: 481px) {
+  div.overlay nav .menu li.menuItem > a {
+    font-size: 12px;
+  }
+  #top h1 {
+    font-size: 35px;
+  }
+  #about .profile img {
+    width: 130px;
+    height: 130px;
+  }
+  #about .profile .profileSummary h2 {
+    font-size: 20px;
+  }
+  #about .profile .profileSummary p:nth-of-type(1) {
+    font-size: 14px;
+  }
+  #about .profile .profileSummary p:nth-of-type(2) {
+    font-size: 14px;
+  }
+  #works {
+    width: 100%;
+    height: 700px;
+    padding: 1.5rem 3rem 1rem 3.5rem;
+  }
+  #works .worksList {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-flex-line-pack: center;
+        align-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+  }
+  #works .worksList .worksListItem {
+    width: 200px;
+    height: 160px;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  #works .worksList .worksListItem .projectBack .links {
+    gap: 1rem;
+  }
+  #contact form {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  body {
+    width: 100%;
+  }
+  body section h1:nth-of-type(1) {
+    font-size: 20px;
+  }
+  .hamburger {
+    visibility: hidden;
+  }
+  div.socialBtn {
+    top: 4rem;
+    margin-left: 1.5rem;
+  }
+  div.overlay {
+    width: 100%;
+    height: 60px;
+    visibility: visible;
+    top: 0;
+    left: 0;
+    border-radius: 0;
+    background-color: #ffa45b;
+    position: fixed;
+  }
+  div.overlay nav {
+    display: block;
+  }
+  div.overlay nav li:first-child {
+    display: block;
+  }
+  div.overlay nav .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  div.overlay nav .menu li.menuItem {
+    margin: 0 2rem 0 0;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+  }
+  div.overlay nav .menu li.menuItem a {
+    font-size: 20px;
+  }
+  #top h1 {
+    margin-top: 5rem;
+    margin-left: 5rem;
+  }
+  #about,
+  #skills,
+  section#works,
+  #contact {
+    padding: 70px 3rem 60px 4.5rem;
+    position: relative;
+  }
+  #about {
+    height: 350px;
+  }
+  #about .profile img {
+    width: 150px;
+    height: 150px;
+  }
+  #about .profile .profileSummary {
+    margin-left: 5rem;
+  }
+  #about .profile .profileSummary h2 {
+    font-size: 25px;
+  }
+  #about .profile .profileSummary p:nth-of-type(1) {
+    font-size: 16px;
+  }
+  #about .profile .profileSummary p:nth-of-type(2) {
+    font-size: 16px;
+  }
+  section#skills {
+    height: 660px;
+  }
+  section#skills a {
+    font-size: 14px;
+  }
+  section#skills .langList {
+    -ms-grid-columns: (1fr)[4];
+        grid-template-columns: repeat(4, 1fr);
+    -ms-grid-rows: auto;
+        grid-template-rows: auto;
+    margin: 3.5rem 0;
+  }
+  section#skills .langListItem {
+    font-size: 20px;
+  }
+  section#skills .langListItem > i {
+    font-size: 50px;
+  }
+  section#skills .langListItem span {
+    font-size: 16px;
+  }
+  section#skills h2,
+  section#skills p {
+    font-size: 18px;
+  }
+  #works {
+    height: 600px;
+  }
+  #works .worksList {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[3];
+        grid-template-columns: repeat(3, 1fr);
+  }
+  #contact {
+    height: 650px;
+  }
+  #contact h1:nth-of-type(2) {
+    font-size: 18px;
+  }
+  #contact p {
+    font-size: 16px;
+  }
+  footer {
+    font-size: 12px;
+    padding: 1rem 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  div.socialBtn {
+    margin-left: 1.5rem;
+  }
+  div.socialBtn a > i {
+    font-size: 25px;
+  }
+  #top h1 {
+    margin-left: 5rem;
+  }
+  section#skills .langList {
+    max-width: 930px;
+    gap: 3rem 0;
+    margin: 3.5rem auto;
+  }
+  section#skills hr {
+    max-width: 700px;
+  }
+  #works {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #works .worksList {
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    gap: 2rem 0;
+    -ms-grid-columns: (320px)[3];
+        grid-template-columns: repeat(3, 320px);
+  }
+  #works .worksList .worksListItem {
+    width: 250px;
+  }
 }
 
 .hamburger {
@@ -570,6 +801,7 @@ hr {
 
 #works .worksListItem {
   width: 250px;
+  height: 160px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -598,8 +830,8 @@ hr {
 }
 
 #works .worksListItem .projectFront {
-  width: 250px;
-  height: 160px;
+  width: 100%;
+  height: 100%;
   position: relative;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
