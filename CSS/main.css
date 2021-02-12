@@ -104,8 +104,8 @@ body {
   height: 110px;
   border-radius: 50%;
   position: relative;
-  -webkit-filter: drop-shadow(0 0 0.75rem #ffa45b);
-          filter: drop-shadow(0 0 0.75rem #ffa45b);
+  -webkit-filter: drop-shadow(0 0 0.75rem #ffa45b) brightness(130%);
+          filter: drop-shadow(0 0 0.75rem #ffa45b) brightness(130%);
 }
 
 #about .profile .profileSummary {
@@ -443,6 +443,7 @@ footer {
   }
   section#skills a {
     font-size: 14px;
+    padding-left: 1rem;
   }
   section#skills .langList {
     -ms-grid-columns: (1fr)[4];
@@ -541,6 +542,14 @@ footer {
     -webkit-transform: translateX(50%) translateY(-50%);
             transform: translateX(50%) translateY(-50%);
   }
+  body #top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  body #top h1 {
+    margin: 5rem auto;
+  }
   body section#skills a {
     position: absolute;
     top: 10%;
@@ -567,8 +576,8 @@ footer {
   width: 28px;
   height: 3px;
   background-color: #000000;
-  -webkit-transition: all .75s ease;
-  transition: all .75s ease;
+  -webkit-transition: all .55s ease;
+  transition: all .55s ease;
 }
 
 .hamburgerLine::before {
@@ -633,6 +642,12 @@ footer {
 .socialBtn a i {
   font-size: 20px;
   margin: 0.5rem;
+  -webkit-transition: all .55s ease;
+  transition: all .55s ease;
+}
+
+.socialBtn a:hover {
+  color: #fff;
 }
 
 .overlay {
@@ -662,8 +677,8 @@ footer {
   position: fixed;
   top: 0;
   left: 0;
-  -webkit-transition: all .75s ease;
-  transition: all .75s ease;
+  -webkit-transition: all .55s ease;
+  transition: all .55s ease;
   -webkit-transform: scale(2);
           transform: scale(2);
   visibility: visible;
@@ -671,8 +686,8 @@ footer {
 
 .overlay.close {
   position: fixed;
-  -webkit-transition: all .75s ease;
-  transition: all .75s ease;
+  -webkit-transition: all .55s ease;
+  transition: all .55s ease;
   visibility: hidden;
 }
 
@@ -705,12 +720,13 @@ footer {
   font-weight: bold;
   letter-spacing: 5px;
   text-decoration: none;
-  -webkit-transition: all .75s ease;
-  transition: all .75s ease;
+  -webkit-transition: all .55s ease;
+  transition: all .55s ease;
 }
 
 .overlay nav .menuItem a:hover {
   letter-spacing: 8px;
+  color: #fff;
 }
 
 section h1:nth-of-type(1) {
@@ -792,8 +808,8 @@ hr {
   border: 2px solid #000000;
   -webkit-transform: scale(0);
           transform: scale(0);
-  -webkit-transition: all .75s ease;
-  transition: all .75s ease;
+  -webkit-transition: all .55s ease;
+  transition: all .55s ease;
 }
 
 #modal.showModal {
@@ -839,8 +855,8 @@ hr {
           transform-style: preserve-3d;
   -webkit-transform: translateZ(1px);
           transform: translateZ(1px);
-  -webkit-transition: all .75s ease;
-  transition: all .75s ease;
+  -webkit-transition: all .55s ease;
+  transition: all .55s ease;
   margin: 1rem 0;
   -webkit-box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.34);
           box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.34);

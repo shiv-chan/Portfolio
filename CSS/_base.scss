@@ -12,7 +12,7 @@ $menu-overlay-color:rgba(255, 164, 91, 0.95);
 }
 
 @mixin transitionEase {
-  transition: all .75s ease;
+  transition: all .55s ease;
 }
 
 @mixin fontSet($weight: 400) {

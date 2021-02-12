@@ -55,7 +55,7 @@ body {
 			height: 110px;
 			border-radius: 50%;
 			position: relative;
-			filter: drop-shadow(0 0 0.75rem $primary-color);
+			filter: drop-shadow(0 0 0.75rem $primary-color) brightness(130%);
 		}
 
 		.profileSummary {
@@ -357,7 +357,8 @@ footer {
 	section#skills {
     height: 600px;
 		a {
-			font-size: 14px;
+      font-size: 14px;
+      padding-left: 1rem;
 		}
 
 		.langList {
@@ -468,6 +469,14 @@ footer {
         top: 50%;
         transform: translateX(50%) translateY(-50%);
       }
+
+    #top {
+      display: flex;
+
+      h1 {
+        margin: 5rem auto;
+      }
+    }  
 
     section#skills a {
       position: absolute;
