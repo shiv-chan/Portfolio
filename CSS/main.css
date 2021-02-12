@@ -360,8 +360,9 @@ footer {
   body {
     width: 100%;
   }
-  body section h1:nth-of-type(1) {
+  body section > h1:nth-of-type(1) {
     font-size: 20px;
+    padding-left: 1rem;
   }
   .hamburger {
     visibility: hidden;
@@ -438,7 +439,7 @@ footer {
     font-size: 16px;
   }
   section#skills {
-    height: 660px;
+    height: 600px;
   }
   section#skills a {
     font-size: 14px;
@@ -524,6 +525,28 @@ footer {
   }
   #works .worksList .worksListItem {
     width: 250px;
+  }
+  #works .worksList .worksListItem .projectBack .links {
+    gap: 2rem;
+  }
+  #contact form {
+    max-width: 550px;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  body section > h1:nth-of-type(1) {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateX(50%) translateY(-50%);
+            transform: translateX(50%) translateY(-50%);
+  }
+  body section#skills a {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
   }
 }
 

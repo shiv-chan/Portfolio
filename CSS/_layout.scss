@@ -267,11 +267,10 @@ footer {
 @include media-md {
 	body {
 		width: 100%;
-		section {
-			h1:nth-of-type(1) {
-				font-size: 20px;
+		section > h1:nth-of-type(1) {
+        font-size: 20px;
+        padding-left: 1rem;
 			}
-		}
 	}
 
 	.hamburger {
@@ -356,7 +355,7 @@ footer {
 	}
 
 	section#skills {
-    height: 660px;
+    height: 600px;
 		a {
 			font-size: 14px;
 		}
@@ -426,13 +425,6 @@ footer {
 		}
 	}
 
-	#about,
-	#skills,
-	section#works,
-	#contact {
-		// padding: 1.5rem 3rem 3.5rem 8.5rem;
-	}
-
 	section#skills {
 		.langList {
 			max-width: 930px;
@@ -452,8 +444,36 @@ footer {
 			gap: 2rem 0;
 			grid-template-columns: repeat(3, 320px);
 			.worksListItem {
-				width: 250px;
+        width: 250px;
+        
+        .projectBack .links {
+          gap: 2rem;
+        }
 			}
 		}
+  }
+  
+  #contact {
+    form {
+      max-width: 550px;
+    }
 	}
+}
+
+//extra large screen
+@include media-xl {
+  body {
+    section > h1:nth-of-type(1) {
+        position: absolute;
+        top: 50%;
+        transform: translateX(50%) translateY(-50%);
+      }
+
+    section#skills a {
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
 }
