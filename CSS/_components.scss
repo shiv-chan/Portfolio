@@ -158,6 +158,45 @@ section {
 		justify-content: center;
 		align-items: center;
 
+		.stars {
+			@include flex(row);
+			justify-content: center;
+			align-items: center;
+
+			.backStars {
+				@include flex(row);
+				position: relative;
+				color: $font-color;
+				z-index: 0;
+
+				.frontStars {
+					@include flex(row);
+					position: absolute;
+					top: 0;
+					z-index: -1;
+					color: $primary-color;
+					overflow: hidden;
+					@include starWidth(1.5);
+					@include gaugeAnimation(1.5);
+
+					&#html, &#css {
+						@include starWidth(2.5);
+						@include gaugeAnimation(2.5);
+					}
+
+					&#sass, &#bootstrap {
+						@include starWidth(2);
+						@include gaugeAnimation(2);
+					}
+
+					&#javascript {
+						@include starWidth(1.5);
+						@include gaugeAnimation(1.5);
+					}
+				}
+			}
+		}
+
 		& > i {
 			font-size: 40px;
 			margin: 0.2rem 0;

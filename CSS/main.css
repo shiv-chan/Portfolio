@@ -762,6 +762,108 @@ section h1:nth-of-type(1) {
           align-items: center;
 }
 
+.langListItem .stars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.langListItem .stars .backStars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: relative;
+  color: #000000;
+  z-index: 0;
+}
+
+.langListItem .stars .backStars .frontStars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: absolute;
+  top: 0;
+  z-index: -1;
+  color: #ffa45b;
+  overflow: hidden;
+  width: 50%;
+}
+
+@-webkit-keyframes gaugeColor {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50%;
+  }
+}
+
+@keyframes gaugeColor {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50%;
+  }
+}
+
+.langListItem .stars .backStars .frontStars#html, .langListItem .stars .backStars .frontStars#css {
+  width: 83.5%;
+}
+
+@keyframes gaugeColor {
+  from {
+    width: 0;
+  }
+  to {
+    width: 83.5%;
+  }
+}
+
+.langListItem .stars .backStars .frontStars#sass, .langListItem .stars .backStars .frontStars#bootstrap {
+  width: 70%;
+}
+
+@keyframes gaugeColor {
+  from {
+    width: 0;
+  }
+  to {
+    width: 70%;
+  }
+}
+
+.langListItem .stars .backStars .frontStars#javascript {
+  width: 50%;
+}
+
+@keyframes gaugeColor {
+  from {
+    width: 0;
+  }
+  to {
+    width: 50%;
+  }
+}
+
 .langListItem > i {
   font-size: 40px;
   margin: 0.2rem 0;
