@@ -64,17 +64,19 @@ $menu-overlay-color:rgba(255, 164, 91, 0.95);
     }
   }
 
- @mixin gaugeAnimation($rate) {
-   @keyframes gaugeColor {
-     from {
-       width: 0;
-     }
-   
-     to {
-       @include starWidth($rate);
-     }
-   }
- }
+@mixin gaugeAnimation($rate) {
+  @keyframes gaugeColor {
+    from {
+      width: 0;
+    }
+  
+    to {
+      @include starWidth($rate);
+    }
+  }
+
+  animation: gaugeColor 1.5s ease;
+}
 
 
 //responsive supprt

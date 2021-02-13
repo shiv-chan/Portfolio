@@ -408,9 +408,13 @@ footer {
   div.overlay nav .menu li.menuItem a {
     font-size: 20px;
   }
+  #top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
   #top h1 {
-    margin-top: 5rem;
-    margin-left: 5rem;
+    margin: 5rem auto;
   }
   #about,
   #skills,
@@ -496,9 +500,6 @@ footer {
   div.socialBtn a > i {
     font-size: 25px;
   }
-  #top h1 {
-    margin-left: 5rem;
-  }
   section#skills .langList {
     max-width: 930px;
     gap: 3rem 0;
@@ -541,14 +542,6 @@ footer {
     top: 50%;
     -webkit-transform: translateX(50%) translateY(-50%);
             transform: translateX(50%) translateY(-50%);
-  }
-  body #top {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-  body #top h1 {
-    margin: 5rem auto;
   }
   body section#skills a {
     position: absolute;
@@ -805,6 +798,8 @@ section h1:nth-of-type(1) {
   color: #ffa45b;
   overflow: hidden;
   width: 50%;
+  -webkit-animation: gaugeColor 1.5s ease;
+          animation: gaugeColor 1.5s ease;
 }
 
 @-webkit-keyframes gaugeColor {
@@ -827,6 +822,8 @@ section h1:nth-of-type(1) {
 
 .langListItem .stars .backStars .frontStars#html, .langListItem .stars .backStars .frontStars#css {
   width: 83.5%;
+  -webkit-animation: gaugeColor 1.5s ease;
+          animation: gaugeColor 1.5s ease;
 }
 
 @keyframes gaugeColor {
@@ -840,6 +837,8 @@ section h1:nth-of-type(1) {
 
 .langListItem .stars .backStars .frontStars#sass, .langListItem .stars .backStars .frontStars#bootstrap {
   width: 70%;
+  -webkit-animation: gaugeColor 1.5s ease;
+          animation: gaugeColor 1.5s ease;
 }
 
 @keyframes gaugeColor {
@@ -853,6 +852,8 @@ section h1:nth-of-type(1) {
 
 .langListItem .stars .backStars .frontStars#javascript {
   width: 50%;
+  -webkit-animation: gaugeColor 1.5s ease;
+          animation: gaugeColor 1.5s ease;
 }
 
 @keyframes gaugeColor {

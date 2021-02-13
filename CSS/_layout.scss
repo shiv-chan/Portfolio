@@ -315,9 +315,9 @@ footer {
   }
 
 	#top {
+		display: flex;
 		h1 {
-      margin-top: 5rem;
-      margin-left: 5rem;
+      margin: 5rem auto;
 		}
 	}
 
@@ -420,12 +420,6 @@ footer {
 		}
 	}
 
-	#top {
-		h1 {
-			margin-left: 5rem;
-		}
-	}
-
 	section#skills {
 		.langList {
 			max-width: 930px;
@@ -468,15 +462,7 @@ footer {
         position: absolute;
         top: 50%;
         transform: translateX(50%) translateY(-50%);
-      }
-
-    #top {
-      display: flex;
-
-      h1 {
-        margin: 5rem auto;
-      }
-    }  
+      } 
 
     section#skills a {
       position: absolute;
