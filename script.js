@@ -1,6 +1,6 @@
 const hamburger = document.querySelector('.hamburger');
 const hamburgerLine = document.querySelector('.hamburgerLine');
-const overlay = document.querySelector('.overlay');
+const overlay = document.querySelector('.menuOverlay');
 const starDiscription = document.querySelector('#starDiscription');
 const modal = document.querySelector('#modal');
 const modalClose = document.querySelector('#modal .close');

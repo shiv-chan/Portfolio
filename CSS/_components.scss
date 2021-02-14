@@ -2,8 +2,8 @@
 .hamburger {
 	position: fixed;
 	z-index: 3;
-	right: 1rem;
-	top: 1rem;
+	right: 2rem;
+	top: 2rem;
 	height: 20px;
 	width: 28px;
 	cursor: pointer;
@@ -58,7 +58,7 @@
 .socialBtn {
 	@include flex(column);
 	align-items: center;
-	margin-left: 0.5rem;
+	margin-left: 1rem;
 	position: fixed;
 	top: 3rem;
 	z-index: 1;
@@ -68,18 +68,18 @@
 
 		i {
 			font-size: 20px;
-      margin: 0.5rem;
-      @include transitionEase;
-    }
-    
-    &:hover {
-      color: #fff;
-    }
+			margin: 0.5rem;
+			@include transitionEase;
+		}
+
+		&:hover {
+			color: #fff;
+		}
 	}
 }
 
 //Menu ovelay
-.overlay {
+.menuOverlay {
 	width: 100vw;
 	height: 100vh;
 	background-attachment: fixed;
@@ -92,6 +92,7 @@
 	justify-content: center;
 	visibility: hidden;
 	border-radius: 50%;
+	font-family: $main-font;
 
 	&.open {
 		position: fixed;
@@ -130,8 +131,8 @@
 				@include transitionEase;
 
 				&:hover {
-          letter-spacing: 8px;
-          color: #fff;
+					letter-spacing: 8px;
+					color: #fff;
 				}
 			}
 		}
@@ -151,7 +152,7 @@ section {
 	grid-template-rows: repeat(3, 1fr);
 	grid-template-columns: repeat(3, 1fr);
 	gap: 1.5rem;
-	margin: 2rem 0;
+	margin: 3rem 0;
 
 	&Item {
 		@include flex(column);
@@ -159,18 +160,18 @@ section {
 		align-items: center;
 
 		.stars {
-			@include flex(row);
-			justify-content: center;
-			align-items: center;
+			@include flex(column);
 
 			.backStars {
 				@include flex(row);
+				justify-content: flex-start;
 				position: relative;
 				color: $font-color;
 				z-index: 0;
 
 				.frontStars {
 					@include flex(row);
+					justify-content: flex-start;
 					position: absolute;
 					top: 0;
 					z-index: -1;
@@ -179,12 +180,14 @@ section {
 					@include starWidth(1.5);
 					@include gaugeAnimation(1.5);
 
-					&#html, &#css {
+					&#html,
+					&#css {
 						@include starWidth(2.5);
 						@include gaugeAnimation(2.5);
 					}
 
-					&#sass, &#bootstrap {
+					&#sass,
+					&#bootstrap {
 						@include starWidth(2);
 						@include gaugeAnimation(2);
 					}
@@ -209,40 +212,14 @@ section {
 	}
 }
 
-hr {
-	width: 80%;
-	border: none;
-	border-top: 2px solid $menu-overlay-color;
-	margin: 0 auto;
-}
-
-#skills {
-	a {
-		display: inline-block;
-		@include fontSet;
-		color: $font-color;
-		font-size: 12px;
-		padding-top: 1rem;
-
-		&::before {
-			font-family: 'Font Awesome 5 Free';
-			font-weight: 900;
-			content: '\f059';
-			text-decoration: none;
-		}
-	}
-}
-
+//Modal
 #modal {
 	position: absolute;
-	top: 5rem;
-	left: 10%;
-	margin: 1rem auto;
 	width: 80%;
 	height: auto;
 	padding: 1rem;
 	background-color: $menu-overlay-color;
-	z-index: 1;
+	z-index: 3;
 	border: 2px solid $font-color;
 	transform: scale(0);
 	@include transitionEase;
@@ -272,176 +249,100 @@ hr {
 	}
 }
 
-#works {
-	.worksList {
-		&Item {
-      width: 250px;
-      height: 160px;
-			@include flex(column);
-			align-items: center;
-			transform-style: preserve-3d;
-			transform: translateZ(1px);
-			@include transitionEase;
-			margin: 1rem 0;
-			box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.34);
+//Cards on works section
+.worksListItem {
+	width: 250px;
+	height: 160px;
+	@include flex(column);
+	align-items: center;
+	transform-style: preserve-3d;
+	transform: translateZ(1px);
+	@include transitionEase;
+	margin: 1rem 0;
+	box-shadow: 0px 6px 10px 0px rgba(0, 0, 0, 0.34);
+	border-radius: 5px;
+
+	&:hover {
+		transform: rotateY(180deg);
+	}
+
+	.projectFront {
+		width: 100%;
+		height: 100%;
+		position: relative;
+		backface-visibility: hidden;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
 			border-radius: 5px;
-      
+		}
 
-			&:hover {
-				transform: rotateY(180deg);
-			}
+		&Title {
+			width: 85%;
+			height: 70px;
+			position: absolute;
+			top: 3rem;
+			left: 0;
 
-			.projectFront {
-				width: 100%;
-				height: 100%;
+			&Inner {
 				position: relative;
-				backface-visibility: hidden;
-
-				img {
-					width: 100%;
-					height: 100%;
-					object-fit: cover;
-					border-radius: 5px;
-				}
-
-				&Title {
-					width: 85%;
-					height: 70px;
-					position: absolute;
-					top: 0;
-					left: 0;
-
-					&Inner {
-						position: relative;
-            top: 3rem;
-						height: 70px;
-						background-color: $primary-color;
-						@include flex(column);
-						justify-content: center;
-						align-items: start;
-						padding-left: 1rem;
-
-						h1,
-						h3 {
-							padding-bottom: 0.3rem;
-							font-family: $main-font;
-							color: $font-color;
-							letter-spacing: initial;
-						}
-
-						h3 {
-							font-size: 12px;
-							@include fontSet(400);
-						}
-					}
-				}
-			}
-
-			.projectBack {
-				position: absolute;
-				top: 0;
-				left: 0;
-				width: 100%;
-				height: 100%;
-				border-radius: 5px;
+				height: 70px;
 				background-color: $primary-color;
 				@include flex(column);
-				align-items: center;
-				font-size: 14px;
-				transform: rotateY(180deg);
-				backface-visibility: hidden;
+				align-items: start;
+				padding-left: 1rem;
 
-				p {
-					margin: 2rem 2rem 1rem 2rem;
+				h1,
+				h3 {
+					display: inline-block;
+					margin: 0;
+					@include fontSet(700);
+					color: $font-color;
+					letter-spacing: initial;
 				}
 
-				.links {
-					display: grid;
-					grid-template-columns: repeat(2, 1fr);
-					gap: 2.5rem;
-
-					a {
-						color: $font-color;
-						text-decoration: none;
-
-						&:hover {
-							color: #fff;
-						}
-					}
+				h3 {
+					font-size: 12px;
+					@include fontSet(400);
+					margin-top: 0.5rem;
 				}
-      }
-    }
+			}
+		}
 	}
-}
 
-//form
-#contact {
-	form {
-		label {
-      z-index: 1;
+	.projectBack {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		border-radius: 5px;
+		background-color: $primary-color;
+		@include flex(column);
+		align-items: center;
+		font-size: 14px;
+		transform: rotateY(180deg);
+		backface-visibility: hidden;
 
-			&.showLabel {
-				visibility: visible;
-			}
+		p {
+			margin: 0.5rem 2rem 1rem 2rem;
 		}
 
-		input,
-		textarea {
-      &:-webkit-autofill {  //customize autocomplete style
-        -webkit-box-shadow: 0 0 0px 1000px #FFC784 inset;
-      }
+		.links {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			gap: 2.5rem;
 
-			&.borderBottom {
-				border-bottom: 3px solid darken($primary-color, 20%);
-			}
+			a {
+				color: $font-color;
+				text-decoration: none;
 
-			&.errorBorder {
-				border: 2px solid $warning-color;
-			}
-
-			&:hover {
-				background-color: lighten(#ffc784, 5%);
-			}
-
-			&:focus {
-				background-color: lighten(#ffc784, 5%);
-
-				&::placeholder {
-					visibility: hidden;
+				&:hover {
+					color: #fff;
 				}
 			}
-		}
-
-		.fa-exclamation-circle {
-			position: absolute;
-			top: 2rem;
-			right: 0.8rem;
-			color: $warning-color;
-			visibility: hidden;
-		}
-
-		i:nth-of-type(2) {
-			top: 6.5rem;
-		}
-
-		i:nth-of-type(3) {
-			top: 11.3rem;
-		}
-
-		small {
-			position: absolute;
-			top: 3.9rem;
-			right: 0.5rem;
-			color: $warning-color;
-			visibility: hidden;
-		}
-
-		small:nth-of-type(2) {
-			top: 8.4rem;
-		}
-
-		small:nth-of-type(3) {
-			top: 18.5rem;
 		}
 	}
 }

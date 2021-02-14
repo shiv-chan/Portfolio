@@ -8,7 +8,7 @@
 			src="https://kit.fontawesome.com/33e91fc437.js"
 			crossorigin="anonymous"
 		></script>
-		<title>Kaho Shibuya</title>
+		<title>Kaho Shibuya - Frontend Developer</title>
 	</head>
 	<body>
 		<!-- Hamburger menu button -->
@@ -22,7 +22,7 @@
 			<a href="#!" target="_blank" rel="noopener noreferrer"><i class="fas fa-file-pdf"></i></a>
 			<a href="https://twitter.com/shivchan_" target="_blank" rel="noopener noreferrer"><i class="fab fa-twitter"></i></a>
 		</div>
-		<div class="overlay">
+		<div class="menuOverlay">
 			<nav>
 				<ul class="menu">
 					<li class="menuItem"><a href="#">TOP</a></li>
@@ -33,395 +33,410 @@
 				</ul>
 			</nav>
 		</div>
-		<header id="top">
-			<h1>Hello, I am Kaho,<br /><span>Frontend Developer.</span></h1>
+		<header id="header">
+			<div id="headerContainer">
+				<h1>Hi, I'm Kaho,</h1>
+				<h1>Frontend Developer.</h1>
+			</div>
 		</header>
 		<section id="about">
-			<h1>ABOUT</h1>
-			<div class="profile">
-				<img src="./Images/Profile.png" alt="Kaho Shibuya" />
-				<div class="profileSummary">
+			<div id="aboutContainer">
+				<h1>ABOUT</h1>
+				<div class="profile">
+					<img src="./Images/Profile.png" alt="Kaho Shibuya" />
 					<h2>KAHO SHIBUYA</h2>
 					<p>Frontend Developer,<br />Digital Marketer</p>
 					<p>
-						Eget euismod non id est aliquam mattis purus elit. Libero orci cum
-						venenatis, odio dapibus odio urna, turpis velit.
+						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officiis, recusandae accusamus expedita ipsa doloremque dignissimos nihil ipsum enim repellendus sit ex reiciendis numquam obcaecati quod rem neque ab ducimus! Sed.
+						Culpa iure nam maiores. 
+						Eveniet, ducimus blanditiis? Autem!
 					</p>
 				</div>
 			</div>
 		</section>
 		<section id="skills">
-			<h1>SKILLS</h1>
-			<a href="#skills" id="starDiscription"
-				>What level of fluency do the stars discribe?</a
-			>
-			<!-- Modal -->
-			<div id="modal">
-				<span class="close">&times;</span>
-				<h2><i class="fas fa-star"></i>Familiar</h2>
-				<p>
-					Can make things work by collaging code snippets together from external
-					referrences.
-				</p>
-				<h2>
-					<i class="fas fa-star"></i><i class="fas fa-star"></i>Proficient
-				</h2>
-				<p>
-					Occassional reference to Stack external referrences, but have good
-					understanding of what the code is doing.
-				</p>
-				<h2>
-					<i class="fas fa-star"></i><i class="fas fa-star"></i
-					><i class="fas fa-star"></i>Excellent
-				</h2>
-				<p>
-					Can code without external referrences or with minimal referrence to
-					documentations.
-				</p>
+			<div id="skillsContainer">
+				<h1>SKILLS</h1>
+				<a href="#skills" id="starDiscription"
+					>What level of fluency do the stars discribe?</a
+				>
+				<!-- Modal -->
+				<div id="modal">
+					<span class="close">&times;</span>
+					<h2><i class="fas fa-star"></i>Familiar</h2>
+					<p>
+						Can make things work by collaging code snippets together from external
+						referrences.
+					</p>
+					<h2>
+						<i class="fas fa-star"></i><i class="fas fa-star"></i>Proficient
+					</h2>
+					<p>
+						Occassional reference to Stack external referrences, but have good
+						understanding of what the code is doing.
+					</p>
+					<h2>
+						<i class="fas fa-star"></i><i class="fas fa-star"></i
+						><i class="fas fa-star"></i>Excellent
+					</h2>
+					<p>
+						Can code without external referrences or with minimal referrence to
+						documentations.
+					</p>
+				</div>
+				<!-- Modal end -->
+				<div class="langList">
+					<div class="langListItem">
+						<div class="stars">
+							<div class="backStars">
+								<i class="far fa-star"></i>
+								<i class="far fa-star"></i>
+								<i class="far fa-star"></i>
+	
+								<div class="frontStars" id="html">
+									<i class="fas fa-star"></i>
+									<i class="fas fa-star"></i>
+									<i class="fas fa-star"></i>
+								</div>
+							</div>
+						</div>
+						<i class="fab fa-html5"></i>
+						<span>HTML</span>
+					</div>
+					<div class="langListItem">
+						<div class="stars">
+							<div class="backStars">
+								<i class="far fa-star"></i>
+								<i class="far fa-star"></i>
+								<i class="far fa-star"></i>
+	
+								<div class="frontStars" id="css">
+									<i class="fas fa-star"></i>
+									<i class="fas fa-star"></i>
+									<i class="fas fa-star"></i>
+								</div>
+							</div>
+						</div>
+						<i class="fab fa-css3-alt"></i>
+						<span>CSS</span>
+					</div>
+					<div class="langListItem">
+						<div class="stars">
+							<div class="backStars">
+								<i class="far fa-star"></i>
+								<i class="far fa-star"></i>
+								<i class="far fa-star"></i>
+	
+								<div class="frontStars" id="sass">
+									<i class="fas fa-star"></i>
+									<i class="fas fa-star"></i>
+									<i class="fas fa-star"></i>
+								</div>
+							</div>
+						</div>
+						<i class="fab fa-sass"></i>
+						<span>SASS</span>
+					</div>
+					<div class="langListItem">
+						<div class="stars">
+							<div class="backStars">
+								<i class="far fa-star"></i>
+								<i class="far fa-star"></i>
+								<i class="far fa-star"></i>
+	
+								<div class="frontStars" id="bootstrap">
+									<i class="fas fa-star"></i>
+									<i class="fas fa-star"></i>
+									<i class="fas fa-star"></i>
+								</div>
+							</div>
+						</div>
+						<i class="fab fa-bootstrap"></i>
+						<span>Bootstrap</span>
+					</div>
+					<div class="langListItem">
+						<div class="stars">
+							<div class="backStars">
+								<i class="far fa-star"></i>
+								<i class="far fa-star"></i>
+								<i class="far fa-star"></i>
+	
+								<div class="frontStars" id="javascript">
+									<i class="fas fa-star"></i>
+									<i class="fas fa-star"></i>
+									<i class="fas fa-star"></i>
+								</div>
+							</div>
+						</div>
+						<i class="fab fa-js-square"></i>
+						<span>JavaScript</span>
+					</div>
+					<div class="langListItem">
+						<div class="stars">
+							<div class="backStars">
+								<i class="far fa-star"></i>
+								<i class="far fa-star"></i>
+								<i class="far fa-star"></i>
+	
+								<div class="frontStars">
+									<i class="fas fa-star"></i>
+									<i class="fas fa-star"></i>
+									<i class="fas fa-star"></i>
+								</div>
+							</div>
+						</div>
+						<i class="fab fa-js-square"></i>
+						<span>JavaScript</span>
+					</div>
+					<div class="langListItem">
+						<div class="stars">
+							<div class="backStars">
+								<i class="far fa-star"></i>
+								<i class="far fa-star"></i>
+								<i class="far fa-star"></i>
+	
+								<div class="frontStars">
+									<i class="fas fa-star"></i>
+									<i class="fas fa-star"></i>
+									<i class="fas fa-star"></i>
+								</div>
+							</div>
+						</div>
+						<i class="fab fa-js-square"></i>
+						<span>JavaScript</span>
+					</div>
+					<div class="langListItem">
+						<div class="stars">
+							<div class="backStars">
+								<i class="far fa-star"></i>
+								<i class="far fa-star"></i>
+								<i class="far fa-star"></i>
+	
+								<div class="frontStars">
+									<i class="fas fa-star"></i>
+									<i class="fas fa-star"></i>
+									<i class="fas fa-star"></i>
+								</div>
+							</div>
+						</div>	
+						<i class="fab fa-js-square"></i>
+						<span>JavaScript</span>
+					</div>
+				</div>
+				<hr />
+				<h2>Other related skills</h2>
+				<ul class="skillsList">
+					<li>Git, GitHub</li>
+					<li>Google Analytics</li>
+					<li>Google App Script</li>
+					<li>MySQL</li>
+				</ul>
 			</div>
-			<!-- Modal end -->
-			<div class="langList">
-				<div class="langListItem">
-					<div class="stars">
-						<div class="backStars">
-							<i class="far fa-star"></i>
-							<i class="far fa-star"></i>
-							<i class="far fa-star"></i>
-
-							<div class="frontStars" id="html">
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-							</div>
-						</div>
-					</div>
-					<i class="fab fa-html5"></i>
-					<span>HTML</span>
-				</div>
-				<div class="langListItem">
-					<div class="stars">
-						<div class="backStars">
-							<i class="far fa-star"></i>
-							<i class="far fa-star"></i>
-							<i class="far fa-star"></i>
-
-							<div class="frontStars" id="css">
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-							</div>
-						</div>
-					</div>
-					<i class="fab fa-css3-alt"></i>
-					<span>CSS</span>
-				</div>
-				<div class="langListItem">
-					<div class="stars">
-						<div class="backStars">
-							<i class="far fa-star"></i>
-							<i class="far fa-star"></i>
-							<i class="far fa-star"></i>
-
-							<div class="frontStars" id="sass">
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-							</div>
-						</div>
-					</div>
-					<i class="fab fa-sass"></i>
-					<span>SASS</span>
-				</div>
-				<div class="langListItem">
-					<div class="stars">
-						<div class="backStars">
-							<i class="far fa-star"></i>
-							<i class="far fa-star"></i>
-							<i class="far fa-star"></i>
-
-							<div class="frontStars" id="bootstrap">
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-							</div>
-						</div>
-					</div>
-					<i class="fab fa-bootstrap"></i>
-					<span>Bootstrap</span>
-				</div>
-				<div class="langListItem">
-					<div class="stars">
-						<div class="backStars">
-							<i class="far fa-star"></i>
-							<i class="far fa-star"></i>
-							<i class="far fa-star"></i>
-
-							<div class="frontStars" id="javascript">
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-							</div>
-						</div>
-					</div>
-					<i class="fab fa-js-square"></i>
-					<span>JavaScript</span>
-				</div>
-				<div class="langListItem">
-					<div class="stars">
-						<div class="backStars">
-							<i class="far fa-star"></i>
-							<i class="far fa-star"></i>
-							<i class="far fa-star"></i>
-
-							<div class="frontStars">
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-							</div>
-						</div>
-					</div>
-					<i class="fab fa-js-square"></i>
-					<span>JavaScript</span>
-				</div>
-				<div class="langListItem">
-					<div class="stars">
-						<div class="backStars">
-							<i class="far fa-star"></i>
-							<i class="far fa-star"></i>
-							<i class="far fa-star"></i>
-
-							<div class="frontStars">
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-							</div>
-						</div>
-					</div>
-					<i class="fab fa-js-square"></i>
-					<span>JavaScript</span>
-				</div>
-				<div class="langListItem">
-					<div class="stars">
-						<div class="backStars">
-							<i class="far fa-star"></i>
-							<i class="far fa-star"></i>
-							<i class="far fa-star"></i>
-
-							<div class="frontStars">
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-							</div>
-						</div>
-					</div>
-					<i class="fab fa-js-square"></i>
-					<span>JavaScript</span>
-				</div>
-			</div>
-			<hr />
-			<h2>Other related skills…</h2>
-			<p>Git, GitHub, Google Analytics, Google App Script, MySQL etc.</p>
 		</section>
 		<section id="works">
-			<h1>WORKS</h1>
-			<div class="worksList">
-				<div class="worksListItem">
-					<div class="projectFront">
-						<img
-							src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1267&q=80"
-							alt="restaurant"
-						/>
-						<div class="projectFrontTitle">
-							<div class="projectFrontTitleInner">
-								<h1>Project Title</h1>
-								<h3>Lang/ Lang/ Lang</h3>
+			<div id="worksContainer">
+				<h1>WORKS</h1>
+				<div class="worksList">
+					<div class="worksListItem">
+						<div class="projectFront">
+							<img
+								src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1267&q=80"
+								alt="restaurant"
+							/>
+							<div class="projectFrontTitle">
+								<div class="projectFrontTitleInner">
+									<h1>Project Title</h1>
+									<h3>Lang/ Lang/ Lang</h3>
+								</div>
+							</div>
+						</div>
+						<div class="projectBack">
+							<p>
+								Scelerisque egestas libero, aliquam iaculis tristique lobortis.
+								Vitae mi metus enim aliquet.
+							</p>
+							<div class="links">
+								<a href="#!" class="projectsBtn">
+									<i class="fas fa-eye"></i> Preview
+								</a>
+								<a href="#!" class="projectsBtn">
+									<i class="fab fa-github"></i> GitHub
+								</a>
 							</div>
 						</div>
 					</div>
-					<div class="projectBack">
-						<p>
-							Scelerisque egestas libero, aliquam iaculis tristique lobortis.
-							Vitae mi metus enim aliquet.
-						</p>
-						<div class="links">
-							<a href="#!" class="projectsBtn">
-								<i class="fas fa-eye"></i> Preview
-							</a>
-							<a href="#!" class="projectsBtn">
-								<i class="fab fa-github"></i> GitHub
-							</a>
+					<div class="worksListItem">
+						<div class="projectFront">
+							<img
+								src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1267&q=80"
+								alt="restaurant"
+							/>
+							<div class="projectFrontTitle">
+								<div class="projectFrontTitleInner">
+									<h1>Project Title</h1>
+									<h3>Lang/ Lang/ Lang</h3>
+								</div>
+							</div>
 						</div>
-					</div>
-				</div>
-				<div class="worksListItem">
-					<div class="projectFront">
-						<img
-							src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1267&q=80"
-							alt="restaurant"
-						/>
-						<div class="projectFrontTitle">
-							<div class="projectFrontTitleInner">
-								<h1>Project Title</h1>
-								<h3>Lang/ Lang/ Lang</h3>
+						<div class="projectBack">
+							<p>
+								Scelerisque egestas libero, aliquam iaculis tristique lobortis.
+								Vitae mi metus enim aliquet.
+							</p>
+							<div class="links">
+								<a href="#!" class="projectsBtn">
+									<i class="fas fa-eye"></i> Preview
+								</a>
+								<a href="#!" class="projectsBtn">
+									<i class="fab fa-github"></i> GitHub
+								</a>
 							</div>
 						</div>
 					</div>
-					<div class="projectBack">
-						<p>
-							Scelerisque egestas libero, aliquam iaculis tristique lobortis.
-							Vitae mi metus enim aliquet.
-						</p>
-						<div class="links">
-							<a href="#!" class="projectsBtn">
-								<i class="fas fa-eye"></i> Preview
-							</a>
-							<a href="#!" class="projectsBtn">
-								<i class="fab fa-github"></i> GitHub
-							</a>
+					<div class="worksListItem">
+						<div class="projectFront">
+							<img
+								src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1267&q=80"
+								alt="restaurant"
+							/>
+							<div class="projectFrontTitle">
+								<div class="projectFrontTitleInner">
+									<h1>Project Title</h1>
+									<h3>Lang/ Lang/ Lang</h3>
+								</div>
+							</div>
 						</div>
-					</div>
-				</div>
-				<div class="worksListItem">
-					<div class="projectFront">
-						<img
-							src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1267&q=80"
-							alt="restaurant"
-						/>
-						<div class="projectFrontTitle">
-							<div class="projectFrontTitleInner">
-								<h1>Project Title</h1>
-								<h3>Lang/ Lang/ Lang</h3>
+						<div class="projectBack">
+							<p>
+								Scelerisque egestas libero, aliquam iaculis tristique lobortis.
+								Vitae mi metus enim aliquet.
+							</p>
+							<div class="links">
+								<a href="#!" class="projectsBtn">
+									<i class="fas fa-eye"></i> Preview
+								</a>
+								<a href="#!" class="projectsBtn">
+									<i class="fab fa-github"></i> GitHub
+								</a>
 							</div>
 						</div>
 					</div>
-					<div class="projectBack">
-						<p>
-							Scelerisque egestas libero, aliquam iaculis tristique lobortis.
-							Vitae mi metus enim aliquet.
-						</p>
-						<div class="links">
-							<a href="#!" class="projectsBtn">
-								<i class="fas fa-eye"></i> Preview
-							</a>
-							<a href="#!" class="projectsBtn">
-								<i class="fab fa-github"></i> GitHub
-							</a>
+					<div class="worksListItem">
+						<div class="projectFront">
+							<img
+								src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1267&q=80"
+								alt="restaurant"
+							/>
+							<div class="projectFrontTitle">
+								<div class="projectFrontTitleInner">
+									<h1>Project Title</h1>
+									<h3>Lang/ Lang/ Lang</h3>
+								</div>
+							</div>
 						</div>
-					</div>
-				</div>
-				<div class="worksListItem">
-					<div class="projectFront">
-						<img
-							src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1267&q=80"
-							alt="restaurant"
-						/>
-						<div class="projectFrontTitle">
-							<div class="projectFrontTitleInner">
-								<h1>Project Title</h1>
-								<h3>Lang/ Lang/ Lang</h3>
+						<div class="projectBack">
+							<p>
+								Scelerisque egestas libero, aliquam iaculis tristique lobortis.
+								Vitae mi metus enim aliquet.
+							</p>
+							<div class="links">
+								<a href="#!" class="projectsBtn">
+									<i class="fas fa-eye"></i> Preview
+								</a>
+								<a href="#!" class="projectsBtn">
+									<i class="fab fa-github"></i> GitHub
+								</a>
 							</div>
 						</div>
 					</div>
-					<div class="projectBack">
-						<p>
-							Scelerisque egestas libero, aliquam iaculis tristique lobortis.
-							Vitae mi metus enim aliquet.
-						</p>
-						<div class="links">
-							<a href="#!" class="projectsBtn">
-								<i class="fas fa-eye"></i> Preview
-							</a>
-							<a href="#!" class="projectsBtn">
-								<i class="fab fa-github"></i> GitHub
-							</a>
+					<div class="worksListItem">
+						<div class="projectFront">
+							<img
+								src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1267&q=80"
+								alt="restaurant"
+							/>
+							<div class="projectFrontTitle">
+								<div class="projectFrontTitleInner">
+									<h1>Project Title</h1>
+									<h3>Lang/ Lang/ Lang</h3>
+								</div>
+							</div>
 						</div>
-					</div>
-				</div>
-				<div class="worksListItem">
-					<div class="projectFront">
-						<img
-							src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1267&q=80"
-							alt="restaurant"
-						/>
-						<div class="projectFrontTitle">
-							<div class="projectFrontTitleInner">
-								<h1>Project Title</h1>
-								<h3>Lang/ Lang/ Lang</h3>
+						<div class="projectBack">
+							<p>
+								Scelerisque egestas libero, aliquam iaculis tristique lobortis.
+								Vitae mi metus enim aliquet.
+							</p>
+							<div class="links">
+								<a href="#!" class="projectsBtn">
+									<i class="fas fa-eye"></i> Preview
+								</a>
+								<a href="#!" class="projectsBtn">
+									<i class="fab fa-github"></i> GitHub
+								</a>
 							</div>
 						</div>
 					</div>
-					<div class="projectBack">
-						<p>
-							Scelerisque egestas libero, aliquam iaculis tristique lobortis.
-							Vitae mi metus enim aliquet.
-						</p>
-						<div class="links">
-							<a href="#!" class="projectsBtn">
-								<i class="fas fa-eye"></i> Preview
-							</a>
-							<a href="#!" class="projectsBtn">
-								<i class="fab fa-github"></i> GitHub
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="worksListItem">
-					<div class="projectFront">
-						<img
-							src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1267&q=80"
-							alt="restaurant"
-						/>
-						<div class="projectFrontTitle">
-							<div class="projectFrontTitleInner">
-								<h1>Project Title</h1>
-								<h3>Lang/ Lang/ Lang</h3>
+					<div class="worksListItem">
+						<div class="projectFront">
+							<img
+								src="https://images.unsplash.com/photo-1466978913421-dad2ebd01d17?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1267&q=80"
+								alt="restaurant"
+							/>
+							<div class="projectFrontTitle">
+								<div class="projectFrontTitleInner">
+									<h1>Project Title</h1>
+									<h3>Lang/ Lang/ Lang</h3>
+								</div>
 							</div>
 						</div>
-					</div>
-					<div class="projectBack">
-						<p>
-							Scelerisque egestas libero, aliquam iaculis tristique lobortis.
-							Vitae mi metus enim aliquet.
-						</p>
-						<div class="links">
-							<a href="#!" class="projectsBtn">
-								<i class="fas fa-eye"></i> Preview
-							</a>
-							<a href="#!" class="projectsBtn">
-								<i class="fab fa-github"></i> GitHub
-							</a>
+						<div class="projectBack">
+							<p>
+								Scelerisque egestas libero, aliquam iaculis tristique lobortis.
+								Vitae mi metus enim aliquet.
+							</p>
+							<div class="links">
+								<a href="#!" class="projectsBtn">
+									<i class="fas fa-eye"></i> Preview
+								</a>
+								<a href="#!" class="projectsBtn">
+									<i class="fab fa-github"></i> GitHub
+								</a>
+							</div>
 						</div>
 					</div>
 				</div>
 			</div>
 		</section>
 		<section id="contact">
-			<h1>CONTACT</h1>
-			<h1>I'M OPEN TO WORK.</h1>
-			<p>Please drop me a line !<br />I’m happy to hear from you &#128521;</p>
-			<form>
-				<label for="name">Name</label>
-				<input type="text" placeholder="Name" id="name" class="formControl" required />
-				<i class="fas fa-exclamation-circle"></i>
-				<small>Error message</small>
-				<label for="email">Email</label>
-				<input type="email" placeholder="Email" id="email" class="formControl" required />
-				<i class="fas fa-exclamation-circle"></i>
-				<small>Error message</small>
-				<label for="message">Message</label>
-				<textarea
-					name="massage"
-					id="message"
-					cols="40"
-					rows="10"
-					placeholder="Message"
-					class="formControl"
-					required
-				></textarea>
-				<i class="fas fa-exclamation-circle"></i>
-				<small>Error message</small>
-				<button type="submit"><span>SUBMIT</span></button>
-			</form>
+			<div id="contactContainer">
+				<h1>CONTACT</h1>
+				<h1>I'M OPEN TO WORK!</h1>
+				<p>Please drop me a line !<br />I’m happy to hear from you &#128521;</p>
+				<form>
+					<label for="name">Name</label>
+					<input type="text" placeholder="Name" id="name" class="formControl" required />
+					<i class="fas fa-exclamation-circle"></i>
+					<small>Error message</small>
+					<label for="email">Email</label>
+					<input type="email" placeholder="Email" id="email" class="formControl" required />
+					<i class="fas fa-exclamation-circle"></i>
+					<small>Error message</small>
+					<label for="message">Message</label>
+					<textarea
+						name="massage"
+						id="message"
+						cols="40"
+						rows="10"
+						placeholder="Message"
+						class="formControl"
+						required
+					></textarea>
+					<i class="fas fa-exclamation-circle"></i>
+					<small>Error message</small>
+					<button type="submit"><span>SUBMIT</span></button>
+				</form>
+			</div>
 		</section>
 		<footer>
 			<div>Kaho Shibuya, Frontend Developer.</div>
