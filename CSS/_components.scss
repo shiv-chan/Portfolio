@@ -214,9 +214,11 @@ section {
 
 //Modal
 #modal {
+	@include flex(column);
+	justify-content: space-evenly;
 	position: absolute;
-	width: 80%;
-	height: auto;
+	width: 70%;
+	height: 70%;
 	padding: 1rem;
 	background-color: $menu-overlay-color;
 	z-index: 3;
@@ -230,6 +232,7 @@ section {
 
 	.close {
 		position: absolute;
+		top: 1rem;
 		right: 1.5rem;
 		font-size: 25px;
 		@include fontSet(900);
@@ -239,13 +242,16 @@ section {
 		}
 	}
 
-	h2 {
-		margin-bottom: 0.5rem;
-	}
-
-	p {
+	.skillLevel {
 		text-align: center;
-		padding-bottom: 1rem;
+
+		h2 {
+			margin-bottom: 0.5rem;
+		}
+
+		p {
+			padding-bottom: 1rem;
+		}
 	}
 }
 

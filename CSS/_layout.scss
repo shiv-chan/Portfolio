@@ -54,20 +54,20 @@ section {
 	justify-content: flex-start;
 	background-color: $secondary-color;
 	position: relative;
-	
+
 	&Container {
 		@include flex(column);
 
-			& > h1 {
-				margin-bottom: 2rem;
-			}
+		& > h1 {
+			margin-bottom: 2rem;
+		}
 
 		.profile {
 			@include flex(column);
 			position: relative;
 			min-width: 120px;
 			margin-top: 3rem;
-	
+
 			img {
 				width: 70%;
 				max-width: 190px;
@@ -75,19 +75,19 @@ section {
 				position: relative;
 				filter: drop-shadow(0 0 0.75rem $primary-color) brightness(130%);
 			}
-	
+
 			h2 {
 				font-size: 20px;
 				min-width: 120px;
 				margin-top: 2rem;
 			}
-	
+
 			p:nth-of-type(1) {
 				font-size: 16px;
 				margin: 0.5rem 0 2rem 0;
 				min-width: 122px;
 			}
-	
+
 			p:nth-of-type(2) {
 				font-size: 14px;
 				width: auto;
@@ -118,7 +118,7 @@ section {
 			font-size: 12px;
 			margin: 1rem auto;
 			white-space: nowrap;
-	
+
 			&::before {
 				font-family: 'Font Awesome 5 Free';
 				font-weight: 900;
@@ -126,14 +126,14 @@ section {
 				text-decoration: none;
 			}
 		}
-	
+
 		hr {
 			width: 80%;
 			border: none;
 			border-top: 2px solid $menu-overlay-color;
 			margin: 0 auto;
 		}
-	
+
 		h2 {
 			font-family: $main-font;
 			text-transform: uppercase;
@@ -160,7 +160,7 @@ section {
 	background-color: $secondary-color;
 	@include flex(column);
 	position: relative;
-	
+
 	&Container {
 		@include flex(column);
 		justify-content: flex-start;
@@ -183,14 +183,14 @@ section {
 	background-color: $tertiary-color;
 	@include flex(column);
 	justify-content: flex-start;
-	
+
 	&Container {
 		@include flex(column);
 
 		& > h1 {
 			margin-bottom: 5rem;
 		}
-	
+
 		h1:nth-of-type(2) {
 			@include sectionTitle;
 			letter-spacing: 3px;
@@ -200,19 +200,19 @@ section {
 			margin-bottom: 0.5rem;
 			white-space: nowrap;
 		}
-	
+
 		p {
 			font-size: 16px;
 			text-align: center;
 			margin-top: 1rem;
 		}
-	
+
 		form {
 			position: relative;
 			margin: 1rem auto;
 			width: 90%;
 			@include flex(column);
-	
+
 			label {
 				position: relative;
 				top: 0;
@@ -221,16 +221,16 @@ section {
 				color: darken($primary-color, 20%);
 				visibility: hidden;
 				z-index: 1;
-	
+
 				&.showLabel {
 					visibility: visible;
 				}
 			}
 
-				label:nth-of-type(3) {
-					left: -35%;
-				}
-	
+			label:nth-of-type(3) {
+				left: -35%;
+			}
+
 			input,
 			textarea {
 				display: inline-block;
@@ -244,43 +244,43 @@ section {
 				padding: 1rem;
 				font-size: 18px;
 				@include fontSet;
-	
+
 				&:-webkit-autofill {
 					//customize autocomplete style
 					-webkit-box-shadow: 0 0 0px 1000px #ffc784 inset;
 				}
-	
+
 				&.borderBottom {
 					border-bottom: 3px solid darken($primary-color, 20%);
 				}
-	
+
 				&.errorBorder {
 					border: 2px solid $warning-color;
 				}
-	
+
 				&:hover {
 					background-color: lighten(#ffc784, 5%);
 				}
-	
+
 				&::placeholder {
 					@include fontSet;
 					color: darken($primary-color, 20%);
 					font-size: 18px;
 				}
-	
+
 				&:focus {
 					background-color: lighten(#ffc784, 5%);
-	
+
 					&::placeholder {
 						visibility: hidden;
 					}
 				}
 			}
-	
+
 			textarea {
 				height: 200px;
 			}
-	
+
 			button {
 				border: none;
 				background-color: $primary-color;
@@ -292,12 +292,12 @@ section {
 				font-size: 16px;
 				cursor: pointer;
 				outline: none;
-	
+
 				&:active {
 					transform: scale(0.9);
 				}
 			}
-	
+
 			.fa-exclamation-circle {
 				position: absolute;
 				top: 2rem;
@@ -305,15 +305,15 @@ section {
 				color: $warning-color;
 				visibility: hidden;
 			}
-		
+
 			i:nth-of-type(2) {
 				top: 6.5rem;
 			}
-		
+
 			i:nth-of-type(3) {
 				top: 11.3rem;
 			}
-		
+
 			small {
 				position: absolute;
 				top: 3.9rem;
@@ -321,11 +321,11 @@ section {
 				color: $warning-color;
 				visibility: hidden;
 			}
-		
+
 			small:nth-of-type(2) {
 				top: 8.4rem;
 			}
-		
+
 			small:nth-of-type(3) {
 				top: 23rem;
 			}
@@ -345,42 +345,75 @@ footer {
 
 //small size screen
 @include media-sm {
-	div.overlay {
-		nav .menu li.menuItem > a {
+	section {
+		h1:nth-of-type(1) {
+			@include sectionTitle(28px);
+		}
+	}
+
+	.menuOverlay {
+		nav .menu .menuItem > a {
 			font-size: 12px;
 		}
 	}
 
-	#top {
-		h1 {
-			font-size: 35px;
+	header #headerContainer {
+		width: 80%;
+
+		h1,
+		h1:nth-of-type(2) {
+			font-size: 28px;
 		}
 	}
 
-	#about {
+	#aboutContainer {
 		.profile {
-			img {
-				width: 130px;
-				height: 130px;
+			h2 {
+				font-size: 24px;
 			}
 
-			.profileSummary {
-				h2 {
-					font-size: 20px;
-				}
+			p:nth-of-type(1) {
+				font-size: 18px;
+			}
 
-				p:nth-of-type(1) {
-					font-size: 14px;
-				}
-
-				p:nth-of-type(2) {
-					font-size: 14px;
-				}
+			p:nth-of-type(2) {
+				font-size: 16px;
+				max-width: 380px;
 			}
 		}
 	}
 
-	#works {
+	#skillsContainer {
+		a {
+			font-size: 16px;
+		}
+
+		.langList {
+			.stars i {
+				font-size: 20px;
+			}
+
+			i {
+				font-size: 46px;
+			}
+
+			span {
+				font-size: 16px;
+			}
+		}
+
+		h2 {
+			font-size: 20px;
+		}
+
+		ul li {
+			font-size: 18px;
+		}
+	}
+
+	#worksContainer {
+		align-items: stretch;
+
 		.worksList {
 			display: grid;
 			grid-template-columns: repeat(2, 1fr);
@@ -389,22 +422,31 @@ footer {
 			margin-top: 1rem;
 
 			.worksListItem {
-				width: 200px;
+				width: auto;
+				min-width: 200px;
+				max-width: 260px;
 				height: 160px;
 				justify-self: center;
 
+				.projectFrontTitleInner {
+					padding-left: 0.5rem;
+
+					& > h1 {
+						font-size: 20px;
+					}
+				}
+
 				.projectBack {
 					.links {
+						width: 80%;
 						gap: 1rem;
+
+						a {
+							justify-self: center;
+						}
 					}
 				}
 			}
-		}
-	}
-
-	#contact {
-		form {
-			width: 60%;
 		}
 	}
 }
@@ -414,9 +456,9 @@ footer {
 	body {
 		width: 100%;
 		section > h1:nth-of-type(1) {
-        font-size: 20px;
-        padding-left: 1rem;
-			}
+			font-size: 20px;
+			padding-left: 1rem;
+		}
 	}
 
 	.hamburger {
@@ -458,12 +500,12 @@ footer {
 				}
 			}
 		}
-  }
+	}
 
 	#top {
 		display: flex;
 		h1 {
-      margin: 5rem auto;
+			margin: 5rem auto;
 		}
 	}
 
@@ -471,9 +513,9 @@ footer {
 	#skills,
 	section#works,
 	#contact {
-    padding: 70px 3rem 60px 4.5rem;
-    position: relative;
-  }
+		padding: 70px 3rem 60px 4.5rem;
+		position: relative;
+	}
 
 	#about {
 		.profile {
@@ -501,8 +543,8 @@ footer {
 
 	section#skills {
 		a {
-      font-size: 14px;
-      padding-left: 1rem;
+			font-size: 14px;
+			padding-left: 1rem;
 		}
 
 		.langList {
@@ -530,7 +572,6 @@ footer {
 	}
 
 	#works {
-
 		.worksList {
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
@@ -581,36 +622,36 @@ footer {
 			gap: 2rem 0;
 			grid-template-columns: repeat(3, 320px);
 			.worksListItem {
-        width: 250px;
-        
-        .projectBack .links {
-          gap: 2rem;
-        }
+				width: 250px;
+
+				.projectBack .links {
+					gap: 2rem;
+				}
 			}
 		}
-  }
-  
-  #contact {
-    form {
-      max-width: 550px;
-    }
+	}
+
+	#contact {
+		form {
+			max-width: 550px;
+		}
 	}
 }
 
 //extra large screen
 @include media-xl {
-  body {
-    section > h1:nth-of-type(1) {
-        position: absolute;
-        top: 50%;
-        transform: translateX(50%) translateY(-50%);
-      } 
+	body {
+		section > h1:nth-of-type(1) {
+			position: absolute;
+			top: 50%;
+			transform: translateX(50%) translateY(-50%);
+		}
 
-    section#skills a {
-      position: absolute;
-      top: 10%;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-  }
+		section#skills a {
+			position: absolute;
+			top: 10%;
+			left: 50%;
+			transform: translateX(-50%);
+		}
+	}
 }
