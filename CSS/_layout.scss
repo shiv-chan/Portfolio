@@ -468,7 +468,7 @@ footer {
 			label {
 				left: -43%;
 			}
-	
+
 			label:nth-of-type(3) {
 				left: -40%;
 			}
@@ -567,10 +567,6 @@ footer {
 			h2 {
 				font-size: 22px;
 			}
-
-			p {
-				text-align: start;
-			}
 		}
 
 		&Container {
@@ -609,7 +605,7 @@ footer {
 @include media-lg {
 	section {
 		h1:nth-of-type(1) {
-			@include sectionTitle(36px);
+			@include sectionTitle(30px);
 			letter-spacing: 15px;
 		}
 	}
@@ -646,23 +642,35 @@ footer {
 
 		#aboutContainer {
 			.profile {
+				@include flex(row);
+
 				img {
-					max-width: 300px;
+					max-width: 200px;
+					align-self: flex-start;
 				}
 
 				h2 {
-					font-size: 30px;
+					font-size: 24px;
 					margin-top: 3.5rem;
+					position: absolute;
+					bottom: 0;
+					left: 1rem;
 				}
 
 				p:nth-of-type(1) {
-					font-size: 22px;
+					font-size: 20px;
+					position: absolute;
+					bottom: -7rem;
+					left: 1rem;
 				}
 
 				p:nth-of-type(2) {
-					font-size: 20px;
+					font-size: 18px;
 					line-height: 35px;
-					max-width: 600px;
+					max-width: 400px;
+					margin-left: 2rem;
+					position: relative;
+					top: 2rem;
 				}
 			}
 		}
@@ -673,6 +681,7 @@ footer {
 
 		#modal {
 			max-width: 1000px;
+			height: 500px;
 
 			span {
 				font-size: 50px;
@@ -682,12 +691,12 @@ footer {
 				width: 70%;
 
 				h2 {
-					font-size: 30px;
+					font-size: 24px;
 				}
 
 				p {
 					text-align: start;
-					font-size: 24px;
+					font-size: 20px;
 				}
 			}
 		}
@@ -696,8 +705,8 @@ footer {
 			max-width: 1000px;
 
 			& > a {
-				font-size: 22px;
-				margin-bottom: 5rem;
+				font-size: 20px;
+				margin-bottom: 3rem;
 			}
 			.langList {
 				gap: 3rem 1rem;
@@ -720,12 +729,12 @@ footer {
 			}
 
 			h2 {
-				font-size: 28px;
+				font-size: 24px;
 				margin-bottom: 2rem;
 			}
 
 			ul li {
-				font-size: 24px;
+				font-size: 20px;
 			}
 		}
 	}
@@ -795,18 +804,32 @@ footer {
 
 	#contact {
 		padding-top: 130px;
-
+		
 		#contactContainer {
+			display: block;
+			width: 750px;
+
+			h1:nth-of-type(1) {
+				margin-bottom: 6rem;
+			}
+
 			h1:nth-of-type(2) {
 				font-size: 26px;
+				width: fit-content;
+				margin: 0;
+				margin-top: 5rem;
+				float: left;
 			}
 
 			p {
+				width: fit-content;
 				font-size: 20px;
 			}
 
 			form {
-				margin: 3rem;
+				width: 50%;
+				float: right;
+				margin: -13rem -4rem;
 
 				label,
 				input,

@@ -404,6 +404,7 @@ section h1:nth-of-type(1) {
           justify-content: space-evenly;
   position: absolute;
   width: 70%;
+  max-width: 500px;
   height: 70%;
   padding: 1rem;
   background-color: rgba(255, 164, 91, 0.95);
@@ -438,11 +439,12 @@ section h1:nth-of-type(1) {
 }
 
 #modal .skillLevel h2 {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 #modal .skillLevel p {
-  padding-bottom: 1rem;
+  text-align: start;
+  margin: 1rem;
 }
 
 .worksListItem {
@@ -1377,9 +1379,6 @@ footer {
   #skills .skillLevel h2 {
     font-size: 22px;
   }
-  #skills .skillLevel p {
-    text-align: start;
-  }
   #skillsContainer > a {
     margin-bottom: 4rem;
   }
@@ -1410,7 +1409,7 @@ footer {
   section h1:nth-of-type(1) {
     text-align: center;
     letter-spacing: 10px;
-    font-size: 36px;
+    font-size: 30px;
     font-family: "Cousine", monospace;
     font-weight: 900;
     margin: 0 auto;
@@ -1440,26 +1439,53 @@ footer {
   #about {
     padding-top: 130px;
   }
+  #about #aboutContainer .profile {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
   #about #aboutContainer .profile img {
-    max-width: 300px;
+    max-width: 200px;
+    -ms-flex-item-align: start;
+        align-self: flex-start;
   }
   #about #aboutContainer .profile h2 {
-    font-size: 30px;
+    font-size: 24px;
     margin-top: 3.5rem;
+    position: absolute;
+    bottom: 0;
+    left: 1rem;
   }
   #about #aboutContainer .profile p:nth-of-type(1) {
-    font-size: 22px;
+    font-size: 20px;
+    position: absolute;
+    bottom: -7rem;
+    left: 1rem;
   }
   #about #aboutContainer .profile p:nth-of-type(2) {
-    font-size: 20px;
+    font-size: 18px;
     line-height: 35px;
-    max-width: 600px;
+    max-width: 400px;
+    margin-left: 2rem;
+    position: relative;
+    top: 2rem;
   }
   #skills {
     padding-top: 130px;
   }
   #skills #modal {
     max-width: 1000px;
+    height: 500px;
   }
   #skills #modal span {
     font-size: 50px;
@@ -1468,18 +1494,18 @@ footer {
     width: 70%;
   }
   #skills #modal .skillLevel h2 {
-    font-size: 30px;
+    font-size: 24px;
   }
   #skills #modal .skillLevel p {
     text-align: start;
-    font-size: 24px;
+    font-size: 20px;
   }
   #skills #skillsContainer {
     max-width: 1000px;
   }
   #skills #skillsContainer > a {
-    font-size: 22px;
-    margin-bottom: 5rem;
+    font-size: 20px;
+    margin-bottom: 3rem;
   }
   #skills #skillsContainer .langList {
     gap: 3rem 1rem;
@@ -1496,11 +1522,11 @@ footer {
     font-size: 22px;
   }
   #skills #skillsContainer h2 {
-    font-size: 28px;
+    font-size: 24px;
     margin-bottom: 2rem;
   }
   #skills #skillsContainer ul li {
-    font-size: 24px;
+    font-size: 20px;
   }
   #works {
     padding-top: 130px;
@@ -1585,14 +1611,32 @@ footer {
   #contact {
     padding-top: 130px;
   }
+  #contact #contactContainer {
+    display: block;
+    width: 750px;
+  }
+  #contact #contactContainer h1:nth-of-type(1) {
+    margin-bottom: 6rem;
+  }
   #contact #contactContainer h1:nth-of-type(2) {
     font-size: 26px;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    margin: 0;
+    margin-top: 5rem;
+    float: left;
   }
   #contact #contactContainer p {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
     font-size: 20px;
   }
   #contact #contactContainer form {
-    margin: 3rem;
+    width: 50%;
+    float: right;
+    margin: -13rem -4rem;
   }
   #contact #contactContainer form label,
   #contact #contactContainer form input,
