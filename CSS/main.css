@@ -1272,21 +1272,17 @@ footer {
 }
 
 @media screen and (min-width: 768px) {
-  body {
-    width: 100%;
-  }
-  body section > h1:nth-of-type(1) {
-    font-size: 20px;
-    padding-left: 1rem;
-  }
   .hamburger {
     visibility: hidden;
   }
-  div.socialBtn {
-    top: 4rem;
-    margin-left: 1.5rem;
+  .socialBtn {
+    top: 6rem;
+    margin-left: 2rem;
   }
-  div.overlay {
+  .socialBtn a i {
+    font-size: 24px;
+  }
+  .menuOverlay {
     width: 100%;
     height: 60px;
     visibility: visible;
@@ -1295,14 +1291,6 @@ footer {
     border-radius: 0;
     background-color: #ffa45b;
     position: fixed;
-  }
-  div.overlay nav {
-    display: block;
-  }
-  div.overlay nav li:first-child {
-    display: block;
-  }
-  div.overlay nav .menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -1316,83 +1304,81 @@ footer {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    justify-content: center;
   }
-  div.overlay nav .menu li.menuItem {
-    margin: 0 2rem 0 0;
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+  .menuOverlay nav {
+    display: block;
+    width: 80%;
   }
-  div.overlay nav .menu li.menuItem a {
-    font-size: 20px;
+  .menuOverlay nav li:first-child {
+    display: block;
   }
-  #top {
+  .menuOverlay nav .menu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
   }
-  #top h1 {
-    margin: 5rem auto;
+  .menuOverlay nav .menu .menuItem {
+    margin: 0;
   }
-  #about,
-  #skills,
-  section#works,
-  #contact {
-    padding: 70px 3rem 60px 4.5rem;
-    position: relative;
+  .menuOverlay nav .menu .menuItem a {
+    font-size: 20px;
   }
-  #about .profile img {
-    width: 150px;
-    height: 150px;
+  header {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
-  #about .profile .profileSummary {
-    margin-left: 5rem;
+  header #headerContainer {
+    width: 365px;
   }
-  #about .profile .profileSummary h2 {
-    font-size: 25px;
+  header #headerContainer h1,
+  header #headerContainer h1:nth-of-type(2) {
+    font-size: 32px;
   }
-  #about .profile .profileSummary p:nth-of-type(1) {
-    font-size: 16px;
+  #aboutContainer .profile h2 {
+    margin-top: 3.5rem;
   }
-  #about .profile .profileSummary p:nth-of-type(2) {
-    font-size: 16px;
+  #aboutContainer .profile p:nth-of-type(1) {
+    margin-bottom: 3.5rem;
   }
-  section#skills a {
-    font-size: 14px;
-    padding-left: 1rem;
+  #skills #modal span {
+    font-size: 30px;
   }
-  section#skills .langList {
+  #skills .skillLevel {
+    width: 70%;
+  }
+  #skills .skillLevel h2 {
+    font-size: 22px;
+  }
+  #skills .skillLevel p {
+    text-align: start;
+  }
+  #skillsContainer .langList {
     -ms-grid-columns: (1fr)[4];
         grid-template-columns: repeat(4, 1fr);
     -ms-grid-rows: auto;
         grid-template-rows: auto;
     margin: 3.5rem 0;
   }
-  section#skills .langListItem {
-    font-size: 20px;
-  }
-  section#skills .langListItem > i {
-    font-size: 50px;
-  }
-  section#skills .langListItem span {
-    font-size: 16px;
-  }
-  section#skills h2,
-  section#skills p {
-    font-size: 18px;
-  }
-  #works .worksList {
-    display: -ms-grid;
-    display: grid;
+  #worksContainer .worksList {
     -ms-grid-columns: (1fr)[3];
         grid-template-columns: repeat(3, 1fr);
   }
-  #contact h1:nth-of-type(2) {
-    font-size: 18px;
-  }
-  #contact p {
-    font-size: 16px;
+  #contactContainer {
+    width: 500px;
   }
   footer {
     font-size: 12px;
