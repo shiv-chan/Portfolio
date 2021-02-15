@@ -54,7 +54,7 @@ window.addEventListener('resize', () => {
     }
   }
 
-  if(window.innerWidth > 768 && overlay.classList.contains('close')){
+  if(window.innerWidth > 768 || overlay.classList.contains('close')){
     overlay.classList.remove('close');
     for (let menuItem of menuItems) {
       menuItem.addEventListener('click', () => {

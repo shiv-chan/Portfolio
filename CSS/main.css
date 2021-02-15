@@ -126,10 +126,6 @@
   transition: all 0.55s ease;
 }
 
-.socialBtn a:hover {
-  color: #fff;
-}
-
 .menuOverlay {
   width: 100vw;
   height: 100vh;
@@ -211,11 +207,6 @@
   text-decoration: none;
   -webkit-transition: all 0.55s ease;
   transition: all 0.55s ease;
-}
-
-.menuOverlay nav .menuItem a:hover {
-  letter-spacing: 8px;
-  color: #fff;
 }
 
 section h1:nth-of-type(1) {
@@ -510,12 +501,12 @@ section h1:nth-of-type(1) {
   position: absolute;
   top: 3rem;
   left: 0;
+  background-color: #ffa45b;
 }
 
 .worksListItem .projectFrontTitleInner {
   position: relative;
   height: 70px;
-  background-color: #ffa45b;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -596,10 +587,7 @@ section h1:nth-of-type(1) {
 .worksListItem .projectBack .links a {
   color: #000000;
   text-decoration: none;
-}
-
-.worksListItem .projectBack .links a:hover {
-  color: #fff;
+  text-shadow: 0 1px rgba(0, 0, 0, 0.34);
 }
 
 html {
@@ -806,7 +794,7 @@ section {
   font-weight: 400;
   color: #000000;
   font-size: 12px;
-  margin: 1rem auto;
+  margin: 1rem auto 2rem auto;
   white-space: nowrap;
 }
 
@@ -862,6 +850,9 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   position: relative;
 }
 
@@ -879,9 +870,6 @@ section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
   height: 90%;
 }
 
@@ -950,7 +938,7 @@ section {
 }
 
 #contactContainer > h1 {
-  margin-bottom: 5rem;
+  margin-bottom: 4rem;
 }
 
 #contactContainer h1:nth-of-type(2) {
@@ -1197,12 +1185,19 @@ footer {
   .menuOverlay nav .menu .menuItem > a {
     font-size: 12px;
   }
+  .menuOverlay nav .menu .menuItem > a:hover {
+    letter-spacing: 8px;
+    color: #fff;
+  }
   header #headerContainer {
     width: 80%;
   }
   header #headerContainer h1,
   header #headerContainer h1:nth-of-type(2) {
     font-size: 28px;
+  }
+  header #headerContainer h1:nth-of-type(2):hover {
+    text-shadow: -2px 2px #ffe1bd;
   }
   #aboutContainer .profile h2 {
     font-size: 24px;
@@ -1269,6 +1264,15 @@ footer {
     -ms-grid-column-align: center;
         justify-self: center;
   }
+  #worksContainer .worksList .worksListItem .projectBack .links a:hover {
+    color: #fff;
+  }
+  #contact form label {
+    left: -43%;
+  }
+  #contact form label:nth-of-type(3) {
+    left: -40%;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -1281,6 +1285,11 @@ footer {
   }
   .socialBtn a i {
     font-size: 24px;
+  }
+  .socialBtn a i:hover {
+    color: #fff;
+    -webkit-transform: translateX(10px);
+            transform: translateX(10px);
   }
   .menuOverlay {
     width: 100%;
@@ -1354,6 +1363,11 @@ footer {
   #aboutContainer .profile p:nth-of-type(1) {
     margin-bottom: 3.5rem;
   }
+  #skills {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
   #skills #modal span {
     font-size: 30px;
   }
@@ -1366,12 +1380,18 @@ footer {
   #skills .skillLevel p {
     text-align: start;
   }
+  #skillsContainer > a {
+    margin-bottom: 4rem;
+  }
   #skillsContainer .langList {
     -ms-grid-columns: (1fr)[4];
         grid-template-columns: repeat(4, 1fr);
     -ms-grid-rows: auto;
         grid-template-rows: auto;
     margin: 3.5rem 0;
+  }
+  #worksContainer > h1 {
+    margin-bottom: 4rem;
   }
   #worksContainer .worksList {
     -ms-grid-columns: (1fr)[3];
@@ -1387,66 +1407,221 @@ footer {
 }
 
 @media screen and (min-width: 1024px) {
-  div.socialBtn {
-    margin-left: 1.5rem;
+  section h1:nth-of-type(1) {
+    text-align: center;
+    letter-spacing: 10px;
+    font-size: 36px;
+    font-family: "Cousine", monospace;
+    font-weight: 900;
+    margin: 0 auto;
+    letter-spacing: 15px;
   }
-  div.socialBtn a > i {
-    font-size: 25px;
+  .socialBtn {
+    top: 6rem;
+    margin-left: 2rem;
   }
-  section#skills .langList {
-    max-width: 930px;
-    gap: 3rem 0;
-    margin: 3.5rem auto;
+  .socialBtn a i {
+    font-size: 30px;
+    margin: 1rem;
   }
-  section#skills hr {
-    max-width: 700px;
+  .menuOverlay {
+    height: 80px;
+  }
+  .menuOverlay nav .menu .menuItem a {
+    font-size: 28px;
+  }
+  header #headerContainer {
+    width: 600px;
+  }
+  header #headerContainer h1,
+  header #headerContainer h1:nth-of-type(2) {
+    font-size: 50px;
+  }
+  #about {
+    padding-top: 130px;
+  }
+  #about #aboutContainer .profile img {
+    max-width: 300px;
+  }
+  #about #aboutContainer .profile h2 {
+    font-size: 30px;
+    margin-top: 3.5rem;
+  }
+  #about #aboutContainer .profile p:nth-of-type(1) {
+    font-size: 22px;
+  }
+  #about #aboutContainer .profile p:nth-of-type(2) {
+    font-size: 20px;
+    line-height: 35px;
+    max-width: 600px;
+  }
+  #skills {
+    padding-top: 130px;
+  }
+  #skills #modal {
+    max-width: 1000px;
+  }
+  #skills #modal span {
+    font-size: 50px;
+  }
+  #skills #modal .skillLevel {
+    width: 70%;
+  }
+  #skills #modal .skillLevel h2 {
+    font-size: 30px;
+  }
+  #skills #modal .skillLevel p {
+    text-align: start;
+    font-size: 24px;
+  }
+  #skills #skillsContainer {
+    max-width: 1000px;
+  }
+  #skills #skillsContainer > a {
+    font-size: 22px;
+    margin-bottom: 5rem;
+  }
+  #skills #skillsContainer .langList {
+    gap: 3rem 1rem;
+    margin-bottom: 6rem;
+  }
+  #skills #skillsContainer .langListItem .stars i {
+    font-size: 30px;
+  }
+  #skills #skillsContainer .langListItem > i {
+    font-size: 60px;
+    margin-top: 1rem;
+  }
+  #skills #skillsContainer .langListItem span {
+    font-size: 22px;
+  }
+  #skills #skillsContainer h2 {
+    font-size: 28px;
+    margin-bottom: 2rem;
+  }
+  #skills #skillsContainer ul li {
+    font-size: 24px;
   }
   #works {
+    padding-top: 130px;
+  }
+  #works #worksContainer {
+    width: 80%;
+    max-width: 1100px;
+  }
+  #works #worksContainer > h1 {
+    margin-bottom: 4rem;
+  }
+  #works #worksContainer .worksList {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: (1fr)[3];
+        grid-template-rows: repeat(3, 1fr);
+    gap: 2rem;
+  }
+  #works #worksContainer .worksList .worksListItem {
+    width: auto;
+    min-width: 350px;
+    max-width: 450px;
+    height: 250px;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  #works #worksContainer .worksList .worksListItem .projectFrontTitle {
+    top: 5.5rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
+    -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
-  #works .worksList {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
-    gap: 2rem 0;
-    -ms-grid-columns: (320px)[3];
-        grid-template-columns: repeat(3, 320px);
+  #works #worksContainer .worksList .worksListItem .projectFrontTitle .projectFrontTitleInner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-left: 0.5rem;
   }
-  #works .worksList .worksListItem {
-    width: 250px;
+  #works #worksContainer .worksList .worksListItem .projectFrontTitle .projectFrontTitleInner > h1 {
+    font-size: 20px;
   }
-  #works .worksList .worksListItem .projectBack .links {
-    gap: 2rem;
+  #works #worksContainer .worksList .worksListItem .projectFrontTitle .projectFrontTitleInner h3 {
+    margin-top: 0;
+    margin-left: 1.5rem;
   }
-  #contact form {
-    max-width: 550px;
+  #works #worksContainer .worksList .worksListItem .projectBack {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
-}
-
-@media screen and (min-width: 1500px) {
-  body section > h1:nth-of-type(1) {
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateX(50%) translateY(-50%);
-            transform: translateX(50%) translateY(-50%);
+  #works #worksContainer .worksList .worksListItem .projectBack p {
+    font-size: 20px;
+    margin: 3.5rem;
+    margin-bottom: 2rem;
   }
-  body section#skills a {
-    position: absolute;
-    top: 10%;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+  #works #worksContainer .worksList .worksListItem .projectBack .links a {
+    font-size: 20px;
+  }
+  #contact {
+    padding-top: 130px;
+  }
+  #contact #contactContainer h1:nth-of-type(2) {
+    font-size: 26px;
+  }
+  #contact #contactContainer p {
+    font-size: 20px;
+  }
+  #contact #contactContainer form {
+    margin: 3rem;
+  }
+  #contact #contactContainer form label,
+  #contact #contactContainer form input,
+  #contact #contactContainer form textarea {
+    font-size: 20px;
+  }
+  #contact #contactContainer form .fa-exclamation-circle {
+    top: 2.2rem;
+  }
+  #contact #contactContainer form i:nth-of-type(2) {
+    top: 6.9rem;
+  }
+  #contact #contactContainer form i:nth-of-type(3) {
+    top: 11.9rem;
+  }
+  #contact #contactContainer form small {
+    top: 4.2rem;
+  }
+  #contact #contactContainer form small:nth-of-type(2) {
+    top: 9.1rem;
+  }
+  #contact #contactContainer form small:nth-of-type(3) {
+    top: 24rem;
+  }
+  #contact #contactContainer form button {
+    font-size: 20px;
+  }
+  footer {
+    height: 80px;
+    font-size: 18px;
   }
 }
